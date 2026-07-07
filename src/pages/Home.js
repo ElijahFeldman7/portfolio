@@ -24,14 +24,6 @@ function Home() {
         <hr className="my-8 border-gray-500" />
 
         <div className="flex">
-          <div className="flex flex-col pr-16">
-            <Link to="/about" className="text-neutral-300 hover:underline hover:text-[var(--accent)] text-sm mb-4">ABOUT</Link>
-            <Link to="/projects" className="text-neutral-300 hover:underline hover:text-[var(--accent)] text-sm mb-4">PROJECTS</Link>
-            <Link to="/contact" className="text-neutral-300 hover:underline hover:text-[var(--accent)] text-sm mb-4">CONTACT</Link>
-            <Link to="/blog" className="text-neutral-300 hover:underline hover:text-[var(--accent)] text-sm mb-4">BLOG</Link>
-            <Link to="/gallery" className="text-neutral-300 hover:underline hover:text-[var(--accent)] text-sm mb-4">GALLERY</Link>
-          </div>
-
           <div>
             <p className="text-neutral-200 leading-relaxed">
               Hi! I go by Eli. I am a student at <a href="https://tjhsst.fcps.edu" className="hover:underline text-[var(--accent)]">Thomas Jefferson High School</a>, and I like working on computer science research.

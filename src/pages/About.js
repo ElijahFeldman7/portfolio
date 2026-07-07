@@ -58,7 +58,7 @@ function About() {
       <main className="max-w-6xl mx-auto text-left pt-0 px-4 flex-1 flex flex-col justify-start bg-neutral-900 bg-opacity-70 p-4">
         <div className="mt-8 flex items-start justify-between">
           <div>
-            <h1 className="text-6xl mb-2"><Link to="/"><span className="font-bold">Elijah</span> Feldman</Link><span className="text-[var(--accent)]">.</span></h1>
+            <h1 className="text-5xl font-bold mb-2"><Link to="/">Elijah Feldman</Link></h1>
             <div className="text-neutral-200 text-2xl mt-1">
               Researcher @ Rutgers University
             </div>

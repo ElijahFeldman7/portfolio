@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import SearchMenu from './SearchMenu';
 
 const NavBar = () => {
   const location = useLocation();
   const [currentPage, setCurrentPage] = useState('');
   const [showCursor, setShowCursor] = useState(true);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
@@ -20,10 +18,6 @@ const NavBar = () => {
     }, 500);
     return () => clearInterval(cursorInterval);
   }, []);
-
-  const toggleSearch = () => {
-    setIsSearchOpen((prev) => !prev);
-  };
 
   const toggleSidebar = () => {
     setIsSidebarOpen((prev) => !prev);
@@ -46,7 +40,7 @@ const NavBar = () => {
   return (
     <nav className="absolute top-5 left-0 w-full max-w-none px-10 py-2.5 box-border bg-neutral-900 rounded-b-lg flex justify-between items-center z-[1000] text-white">
       <Link to="/" className="text-lg font-bold text-white no-underline">
-        <span className="text-[var(--accent)]">ef</span>/{currentPage}{showCursor && <span className="blinking-cursor">|</span>}
+        <span className="text-[var(--accent)]">ef</span>/{currentPage}
       </Link>
 
       <div className="flex items-center gap-5">
@@ -63,10 +57,6 @@ const NavBar = () => {
         </div>
 
         <div className="flex items-center gap-[15px]">
-          <button onClick={toggleSearch} className="bg-transparent border-none text-white hover:text-[var(--accent)] cursor-pointer text-lg">
-            ⌘
-          </button>
-
           <button
             onClick={toggleSidebar}
             className="md:hidden bg-transparent border-none text-white cursor-pointer text-lg rounded px-2.5 py-1"
@@ -85,7 +75,7 @@ const NavBar = () => {
             <Link
               key={page.name}
               to={page.path}
-              onClick={() => { setIsSidebarOpen(false); setIsSearchOpen(false); }}
+              onClick={() => setIsSidebarOpen(false)}
               className={`text-2xl no-underline transition-colors duration-300 ${isActive(page.path) ? 'text-[var(--accent)]' : 'text-white hover:text-[var(--accent)]'}`}
             >
               {page.name}
@@ -94,7 +84,6 @@ const NavBar = () => {
         </div>
       )}
 
-      <SearchMenu isOpen={isSearchOpen} setIsOpen={setIsSearchOpen} />
     </nav>
   );
 };

@@ -6,9 +6,7 @@ function Projects() {
       <main className="max-w-6xl mx-auto text-left pt-0 px-4 sm:px-6 md:px-8 flex-1 flex flex-col justify-start bg-neutral-900 bg-opacity-70 p-4">
         <div className="mt-8 flex items-start justify-between">
           <div>
-            <h1 className="text-5xl font-bold flex items-center flex-wrap">
-              <span>Projects </span><span className="text-5xl text-[var(--accent)]">.</span>
-            </h1>
+            <h1 className="text-5xl font-bold">Projects</h1>
           </div>
         </div>        
         <div className="mt-8 mb-12">
@@ -31,8 +29,8 @@ function Projects() {
                 based reccomendation system.
               </p>
               <div className="flex flex-wrap items-center gap-3">
-                <a href="https://bioblitz.net" target="_blank" rel="noopener noreferrer" className="inline-block border border-white/30 text-white text-sm px-4 py-1.5 hover:bg-white hover:text-neutral-900 transition-colors duration-300">Website</a>
-                <a href="https://github.com/bioblitz" target="_blank" rel="noopener noreferrer" className="inline-block border border-white/30 text-white text-sm px-4 py-1.5 hover:bg-white hover:text-neutral-900 transition-colors duration-300">Code</a>
+                <a href="https://bioblitz.net" target="_blank" rel="noopener noreferrer" className="inline-block border border-white/30 text-white text-sm px-4 py-1.5 rounded hover:bg-white hover:text-neutral-900 transition-colors duration-300">Website</a>
+                <a href="https://github.com/bioblitz" target="_blank" rel="noopener noreferrer" className="inline-block border border-white/30 text-white text-sm px-4 py-1.5 rounded hover:bg-white hover:text-neutral-900 transition-colors duration-300">Code</a>
               </div>
             </div>
             <div className="mt-4 md:mt-0">
