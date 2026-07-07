@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 function Projects() {
   return (
     <div className="min-h-screen flex flex-col justify-center">
-      <main className="max-w-6xl mx-auto text-left pt-0 px-4 sm:px-6 md:px-8 flex-1 flex flex-col justify-start text-container">
+      <main className="max-w-6xl mx-auto text-left pt-0 px-4 sm:px-6 md:px-8 flex-1 flex flex-col justify-start bg-neutral-900 bg-opacity-70 p-4">
         <div className="mt-8 flex items-start justify-between">
           <div>
             <h1 className="text-5xl font-bold flex items-center flex-wrap">
-              <span>Projects </span><span className="text-5xl" style={{ color: '#1a85ff' }}>.</span>
+              <span>Projects </span><span className="text-5xl text-[var(--accent)]">.</span>
             </h1>
           </div>
         </div>        
@@ -39,20 +39,6 @@ function Projects() {
           </div>
 
         </div>
-        <footer className="text-center text-neutral-500 text-sm p-4 flex flex-col items-center space-y-2">
-          <div className="flex items-center justify-center space-x-3">
-            <a href="https://github.com/ElijahFeldman7" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <svg className="inline-block w-6 h-6 text-black hover:text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.606-2.665-.304-5.466-1.332-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 013.003-.404c1.018.005 2.045.138 3.003.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.804 5.625-5.475 5.921.43.372.823 1.102.823 2.222v3.293c0 .322.218.694.825.576C20.565 21.796 24 17.297 24 12c0-6.63-5.37-12-12-12z" />
-              </svg>
-            </a>
-            <a href="https://github.com/ElijahFeldman7" target="_blank" rel="noopener noreferrer" className="hover:underline text-black font-medium">@ElijahFeldman7</a>
-            <svg className="inline-block w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 20v-9.99l7.29 6.71c.39.36 1.02.36 1.41 0L20 10.01V20H4z" />
-            </svg>
-            <a href="mailto:2028efeldman@tjhsst.edu" className="hover:underline text-black font-medium">2028efeldman@tjhsst.edu</a>
-          </div>
-        </footer>
       </main>
     </div>
   );

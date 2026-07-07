@@ -8,7 +8,6 @@ import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import CreatePost from './pages/CreatePost';
 import Gallery from './pages/Gallery';
-import VantaComponent from './components/VantaComponent';
 import ProgressBar from './components/ProgressBar';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
@@ -43,12 +42,11 @@ function AppContent() {
   }, []);
 
   return (
-    <div style={{ backgroundColor: isHomePage ? 'transparent' : 'black' }}>
-      {isHomePage && <VantaComponent />}
+    <div className={isHomePage ? '' : 'bg-neutral-900'}>
       <ProgressBar />
       {!isHomePage && <NavBar />}
       <SearchMenu isOpen={isSearchOpen} setIsOpen={setIsSearchOpen} />
-      <div style={{ position: 'relative', zIndex: 1, paddingTop: isHomePage ? '0px' : '70px', width: '100%', boxSizing: 'border-box' }}>
+      <div className="relative w-full box-border" style={{ paddingTop: isHomePage ? '0px' : '70px' }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -60,7 +58,7 @@ function AppContent() {
           <Route path="/create-post-hidden" element={<CreatePost />} />
         </Routes>
       </div>
-      {!isHomePage && <Footer />}
+      <Footer />
     </div>
   );
 }

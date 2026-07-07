@@ -23,9 +23,9 @@ function CreatePost() {
 
   return (
     <div className="min-h-screen flex flex-col justify-center text-white">
-      <main className="max-w-2xl mx-auto text-left pt-0 px-4 flex-1 flex flex-col justify-start text-container">
+      <main className="max-w-2xl mx-auto text-left pt-0 px-4 flex-1 flex flex-col justify-start bg-neutral-900 bg-opacity-70 p-4">
         <div className="mt-8">
-          <h1 className="text-5xl font-bold">Create New Blog Post<span style={{ color: '#1a85ff' }}>.</span></h1>
+          <h1 className="text-5xl font-bold">Create New Blog Post<span className="text-[var(--accent)]">.</span></h1>
         </div>
 
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">

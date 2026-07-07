@@ -18,21 +18,12 @@ const ProgressBar = () => {
   }, []);
 
   return (
-    <div
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '4px',
-        zIndex: 1000,
-      }}
-    >
+    <div className="fixed top-0 left-0 w-full h-1 z-[1000]">
       <div
         style={{
           height: '100%',
           width: `${scroll}%`,
-          backgroundColor: '#00BFFF',
+          backgroundColor: 'var(--accent)',
         }}
       />
     </div>

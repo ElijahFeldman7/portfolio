@@ -22,9 +22,9 @@ function BlogPost() {
 
   return (
     <div className="min-h-screen flex flex-col justify-center text-white">
-      <main className="max-w-4xl mx-auto text-left pt-0 px-4 flex-1 flex flex-col justify-start text-container">
+      <main className="max-w-4xl mx-auto text-left pt-0 px-4 flex-1 flex flex-col justify-start bg-neutral-900 bg-opacity-70 p-4">
         <div className="mt-8">
-          <h1 className="text-5xl font-bold">{post.title}<span style={{ color: '#1a85ff' }}>.</span></h1>
+          <h1 className="text-5xl font-bold">{post.title}<span className="text-[var(--accent)]">.</span></h1>
           <p className="text-gray-400 text-lg mt-2">{post.date} - {post.topic}</p>
         </div>
         <img src={post.image} alt={post.title} className="w-full max-w-full h-auto my-8 rounded-lg"/>

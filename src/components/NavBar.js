@@ -8,7 +8,6 @@ const NavBar = () => {
   const [showCursor, setShowCursor] = useState(true);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  //const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     const pathName = location.pathname === '/' ? 'home' : location.pathname.substring(1);
@@ -22,14 +21,6 @@ const NavBar = () => {
     return () => clearInterval(cursorInterval);
   }, []);
 
-  /* useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark-mode');
-    } else {
-      document.documentElement.classList.remove('dark-mode');
-    }
-  }, [isDarkMode]);
-  */
   const toggleSearch = () => {
     setIsSearchOpen((prev) => !prev);
   };
@@ -37,104 +28,73 @@ const NavBar = () => {
   const toggleSidebar = () => {
     setIsSidebarOpen((prev) => !prev);
   };
-  /*
-  const toggleDarkMode = () => {
-    setIsDarkMode((prev) => !prev);
+
+  const isActive = (path) => {
+    if (path === '/') return location.pathname === '/';
+    return location.pathname.startsWith(path);
   };
-  */
+
   const pages = [
-    { name: 'Home', path: '/', icon: '🏠' },
-    { name: 'About', path: '/about', icon: 'ℹ️' },
-    { name: 'Projects', path: '/projects', icon: '💻' },
-    { name: 'Blog', path: '/blog', icon: '✍️' },
-    { name: 'Contact Me', path: '/contact', icon: '✉️' },
-    { name: 'Gallery', path: '/gallery', icon: '📸'}
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Contact Me', path: '/contact' },
+    { name: 'Gallery', path: '/gallery'}
   ];
 
   return (
-    <nav style={{
-      position: 'absolute',
-      top: '20px',
-      left: 0,
-      width: '100%',
-      maxWidth: 'none',
-      padding: '10px 40px',
-      boxSizing: 'border-box',
-      backgroundColor: 'rgba(0, 0, 0, 0.7)',
-      borderRadius: '0 0 10px 10px',
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      zIndex: 1000,
-      color: 'white',
-    }}>
-      <Link to="/" style={{ fontSize: '1.2em', fontWeight: 'bold', color: 'white', textDecoration: 'none' }}>
-        ef/{currentPage}{showCursor && <span style={{ animation: 'blink-caret .75s step-end infinite' }}>|</span>}
+    <nav className="absolute top-5 left-0 w-full max-w-none px-10 py-2.5 box-border bg-neutral-900 rounded-b-lg flex justify-between items-center z-[1000] text-white">
+      <Link to="/" className="text-lg font-bold text-white no-underline">
+        <span className="text-[var(--accent)]">ef</span>/{currentPage}{showCursor && <span className="blinking-cursor">|</span>}
       </Link>
 
-      <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-        <div className="hidden md:flex" style={{ gap: '20px' }}>
+      <div className="flex items-center gap-5">
+        <div className="hidden md:flex gap-5">
           {pages.map((page) => (
-            <Link key={page.name} to={page.path} style={{ color: 'white', textDecoration: 'none', transition: 'color 0.3s ease', '&:hover': { textDecoration: 'underline' } }}>
+            <Link
+              key={page.name}
+              to={page.path}
+              className={`no-underline transition-colors duration-300 ${isActive(page.path) ? 'text-[var(--accent)]' : 'text-white hover:text-[var(--accent)]'}`}
+            >
               {page.name}
             </Link>
           ))}
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-          <button onClick={toggleSearch} style={{ background: 'none', border: 'none', color: 'white', cursor: 'pointer', fontSize: '1.2em' }}>
+        <div className="flex items-center gap-[15px]">
+          <button onClick={toggleSearch} className="bg-transparent border-none text-white hover:text-[var(--accent)] cursor-pointer text-lg">
             ⌘
           </button>
-          
 
           <button
             onClick={toggleSidebar}
-            style={{
-              background: 'rgba(128, 128, 128, 0.0)', 
-              border: 'none',
-              color: 'white',
-              cursor: 'pointer',
-              fontSize: '1.2em',
-              borderRadius: '5px',
-              padding: '5px 10px',
-              marginLeft: '10px', 
-            }}
+            className="md:hidden bg-transparent border-none text-white cursor-pointer text-lg rounded px-2.5 py-1"
           >
             {isSidebarOpen ? '✕' : '☰'}
           </button>
         </div>
       </div>
 
-      <SearchMenu isOpen={isSearchOpen} setIsOpen={setIsSearchOpen} />
-
-      <div
-        style={{
-          position: 'fixed',
-          top: '60px',
-          right: 0,
-          height: 'fit-content',
-          width: 'fit-content',
-          backgroundColor: 'rgba(0, 0, 0, 0.9)',
-          zIndex: 999,
-          padding: '10px',
-          boxShadow: '-5px 0 15px rgba(0, 0, 0, 0.5)',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '5px',
-          transform: isSidebarOpen ? 'translateX(0)' : 'translateX(100%)',
-          transition: 'transform 0.3s ease-in-out',
-        }}
-      >
-        {pages.map((page) => (
-          <React.Fragment key={page.name}>
-            <Link to={page.path} onClick={() => { setIsSidebarOpen(false); setIsSearchOpen(false); }} style={{ color: 'white', textDecoration: 'none', fontSize: '0.9em', padding: '5px', display: 'flex', alignItems: 'center' }}>
-              <span style={{ marginRight: '8px', filter: 'grayscale(100%)' }}>{page.icon}</span>
+      {isSidebarOpen && (
+        <div className="fixed inset-0 bg-neutral-900 z-[999] flex flex-col items-center justify-center gap-6" onClick={() => setIsSidebarOpen(false)}>
+          <button onClick={toggleSidebar} className="absolute top-6 right-6 bg-transparent border-none text-white cursor-pointer text-2xl">
+            ✕
+          </button>
+          {pages.map((page) => (
+            <Link
+              key={page.name}
+              to={page.path}
+              onClick={() => { setIsSidebarOpen(false); setIsSearchOpen(false); }}
+              className={`text-2xl no-underline transition-colors duration-300 ${isActive(page.path) ? 'text-[var(--accent)]' : 'text-white hover:text-[var(--accent)]'}`}
+            >
               {page.name}
             </Link>
-            <hr style={{ borderTop: '1px solid rgba(255, 255, 255, 0.1)' }} />
-          </React.Fragment>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
+
+      <SearchMenu isOpen={isSearchOpen} setIsOpen={setIsSearchOpen} />
     </nav>
   );
 };

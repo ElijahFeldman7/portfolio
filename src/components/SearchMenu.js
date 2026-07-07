@@ -25,60 +25,25 @@ const SearchMenu = ({ isOpen, setIsOpen }) => {
   return (
     <>
       <div
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
-          zIndex: 1999, 
-        }}
+        className="fixed inset-0 bg-black/50 z-[1999]"
         onClick={() => setIsOpen(false)} 
       ></div>
       <div
-        style={{
-          position: 'fixed',
-          top: '50%', 
-          left: '50%', 
-          transform: 'translate(-50%, -50%)', 
-          backgroundColor: 'rgba(0, 0, 0, 0.9)', 
-          padding: '2rem', 
-          borderRadius: '0.75rem', 
-          zIndex: 2000,
-          width: '90%', 
-          maxWidth: '600px', 
-          boxShadow: '0 0 20px rgba(0, 0, 0, 0.5)',
-        }}
+        className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/90 p-8 rounded-xl z-[2000] w-[90%] max-w-[600px] shadow-2xl"
       >
-        <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+        <div className="relative flex items-center">
           <input
             type="text"
             placeholder="Search..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            style={{
-              width: '100%',
-              padding: '1rem 1rem 1rem 3rem',
-              marginBottom: '1rem',
-              borderRadius: '0.5rem', 
-              border: 'none',
-              fontSize: '1.2rem',
-              backgroundColor: '#333',
-              color: 'white',
-            }}
+            className="w-full py-4 pl-12 pr-4 mb-4 rounded-lg border-none text-lg bg-[#333] text-white"
           />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
-            style={{
-              position: 'absolute',
-              left: '1rem',
-              color: '#bbb',
-              width: '1.5rem',
-              height: '1.5rem',
-            }}
+            className="absolute left-4 text-gray-400 w-6 h-6"
           >
             <path
               fillRule="evenodd"

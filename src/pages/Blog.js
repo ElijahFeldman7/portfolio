@@ -17,9 +17,9 @@ function Blog() {
 
   return (
     <div className="min-h-screen flex flex-col justify-center text-white">
-      <main className="max-w-6xl mx-auto text-left pt-0 px-2 sm:px-4 flex-1 flex flex-col justify-start text-container">
+      <main className="max-w-6xl mx-auto text-left pt-0 px-2 sm:px-4 flex-1 flex flex-col justify-start bg-neutral-900 bg-opacity-70 p-4">
         <div className="mt-8">
-          <h1 className="text-6xl font-bold">Blog<span style={{ color: '#1a85ff' }}>.</span></h1>
+          <h1 className="text-6xl font-bold">Blog<span className="text-[var(--accent)]">.</span></h1>
         </div>
 
         <div className="flex flex-col sm:flex-row mt-6 mb-4 space-y-4 sm:space-y-0 sm:space-x-4"> {/* Adjusted for stacking on very small screens */}

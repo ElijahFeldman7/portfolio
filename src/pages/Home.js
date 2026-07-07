@@ -1,21 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 function Home() {
   return (
-    <div className="min-h-screen flex flex-col justify-center">
-      <main className="max-w-xl mx-auto text-left pt-0 px-4 flex-1 flex flex-col justify-start text-container">
+    <>
+      <div className="min-h-screen flex flex-col justify-center relative z-10">
+      <main className="max-w-xl mx-auto text-left flex-1 flex flex-col justify-start p-4 bg-neutral-900 bg-opacity-70">
         <div className="mt-8 flex items-center justify-between">
           <div>
-            <h1 className="text-5xl font-serif italic"><Link to="/">Elijah Feldman</Link></h1>
-            <div className="text-gray-400 text-xl mt-1">
-              <span className="italic">is a <span>learner</span>, <span>researcher</span>, and</span>
-              <span className="italic">  <span>developer.</span></span>
-            </div>
+            <h1 className="text-5xl text-neutral-100 mb-2"><Link to="/"><span className="font-semibold">Elijah</span> Feldman</Link></h1>
+            <div className="text-neutral-300 text-lg mt-1">
+              Research Intern @ <Link to="https://rutgers.edu" className="hover:underline text-[var(--accent)]">Rutgers University</Link>
+             </div>
           </div>
           <div className="ml-8">
-            <div className="ml-8 w-32 h-32 rounded-full overflow-hidden">
-            <img src="/gallery/IMG_0640.jpg" alt="Elijah Feldman" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '10% 50%' }} />
+            <div className="ml-8 w-44 h-33 rounded overflow-hidden">
+            <img src="/gallery/IMG_0640.jpg" alt="Elijah Feldman" className="w-full h-full object-cover" style={{ objectPosition: '10% 50%' }} />
           </div>
           </div>
         </div>
@@ -24,51 +25,37 @@ function Home() {
 
         <div className="flex">
           <div className="flex flex-col pr-16">
-            <Link to="/about" className="text-gray-400 hover:underline hover:text-white text-sm mb-4">ABOUT</Link>
-            <Link to="/projects" className="text-gray-400 hover:underline hover:text-white text-sm mb-4">PROJECTS</Link>
-            <Link to="/contact" className="text-gray-400 hover:underline hover:text-white text-sm mb-4">CONTACT</Link>
-            <Link to="/blog" className="text-gray-400 hover:underline hover:text-white text-sm mb-4">BLOG</Link>
-            <Link to="/gallery" className="text-gray-400 hover:underline hover:text-white text-sm mb-4">GALLERY</Link>
-
-
-
-            <div className="text-gray-400 text-xs">
-              <span className="text-black bg-white rounded-full px-2 py-1 mt-4">⌘K</span>  for menu
-            </div>
+            <Link to="/about" className="text-neutral-300 hover:underline hover:text-[var(--accent)] text-sm mb-4">ABOUT</Link>
+            <Link to="/projects" className="text-neutral-300 hover:underline hover:text-[var(--accent)] text-sm mb-4">PROJECTS</Link>
+            <Link to="/contact" className="text-neutral-300 hover:underline hover:text-[var(--accent)] text-sm mb-4">CONTACT</Link>
+            <Link to="/blog" className="text-neutral-300 hover:underline hover:text-[var(--accent)] text-sm mb-4">BLOG</Link>
+            <Link to="/gallery" className="text-neutral-300 hover:underline hover:text-[var(--accent)] text-sm mb-4">GALLERY</Link>
           </div>
 
           <div>
-            <p className="text-white leading-relaxed">
-              Hi! I go by Eli. I like systems and solving large scale problems. You'll find me working on some form of Computer Science research.
-              I am currently building <Link to="/https://bioblitz.net" className="hover:underline" style={{ color: '#1a85ff' }}>BioBlitz </Link>, a platform making competitive biology questions easily accessible. 
-              I spent my time last summer at <a href="https://gmu.edu" className="hover:underline" style={{ color: '#1a85ff' }}>GMU</a>, creating graphs out of human smuggling cases. I'm also spend a significant amount of time
-              as a sysadmin at my school, where I am learning how to manage servers.
+            <p className="text-neutral-200 leading-relaxed">
+              Hi! I go by Eli. I am a student at <Link to="https://tjhsst.fcps.edu" className="hover:underline text-[var(--accent)]">Thomas Jefferson High School</Link>, and I like working on computer science research.
+              I'm most interested in data mining, AI safety, and biostatistics.
+            <br/>
+            <br/>
+              I spent the last year working at <a href="https://gmu.edu" className="hover:underline text-[var(--accent)]">GMU</a>, structuring court documents into knowledge graphs (<Link to="https://arxiv.org/abs/2606.19710" className="hover:underline text-[var(--accent)]">paper
+              </Link> under submission ICKG '26). I just started work this summer ('26) at <Link to="https://rutgers.edu" className="hover:underine text-[var(--accent)]">Rutgers</Link>, experimenting on external validation during statistical and ML modelling.
+              Independently, I am looking at advancing watermarking methods for LLMs.
             <br />
             <br />
-              I volunteer at <Link to="https://arbccompetition.org" className="hover:underline" style={{ color: '#1a85ff'}}>ARBC</Link> a place thats hosts biology competitions. I am working on the testing software currently.
+              I also like to build software, including several <Link to="/projects" className="hover:underline text-[var(--accent)]">projects</Link>. I am currently building at <Link to="https://bioblitz.net" className="hover:underline text-[var(--accent)]">BioBlitz</Link>, a platform making competitive biology questions easily accessible. 
+              I volunteer at <Link to="https://arbccompetition.org" className="hover:underline text-[var(--accent)]">ARBC</Link> where I previously built testing softwar for biology competitions.
             <br />
             <br />
-              I'm especially interested in safe and faster AI. Right now I'm working on watermarking LLMs and also a better optimizer for transformers. 
+              At my school, I volunteer as a student <Link to="https://sysadmins.tjhsst.edu" className="hover:underline text-[var(--accent)]">sysadmin</Link>, where we manage a cluster and linux servers.
             </p>
 
           </div>
         </div>
 
-        <hr className="my-8 border-gray-500" />
-
-        <footer className="text-center text-neutral-500 text-sm p-6 flex flex-col items-center space-y-2">
-          <div className="flex items-center justify-center space-x-3">
-            <a href="https://github.com/ElijahFeldman7" target="_blank" className = "hover:underline" rel="noopener noreferrer" aria-label="GitHub">
-              github
-            </a>
-            <a href="https://www.linkedin.com/in/elijah-feldman-48798330b" target="_blank" className = "hover:underline" rel="noopener noreferrer" aria-label="LinkedIn">
-              linkedin
-            </a>
-            <a href="mailto:2028efeldman@tjhsst.edu" className="hover:underline text-white">email</a>
-          </div>
-        </footer>
       </main>
     </div>
+    </>
   );
 }
 
