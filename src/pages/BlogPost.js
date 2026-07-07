@@ -21,14 +21,16 @@ function BlogPost() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col justify-center text-white">
-      <main className="max-w-4xl mx-auto text-left pt-0 px-4 flex-1 flex flex-col justify-start bg-neutral-900 bg-opacity-70 p-4">
-        <div className="mt-8">
-          <h1 className="text-5xl font-bold">{post.title}</h1>
-          <p className="text-gray-400 text-lg mt-2">{post.date} - {post.topic}</p>
+    <div className="min-h-screen flex flex-col justify-center">
+      <main className="max-w-6xl mx-auto text-left pt-0 px-4 flex-1 flex flex-col justify-start bg-neutral-900 bg-opacity-70 p-4">
+        <div className="mt-8 flex items-start justify-between">
+          <div>
+            <h1 className="text-5xl font-bold">{post.title}</h1>
+            <p className="text-gray-400 text-sm md:text-base mt-2">{post.date} - {post.topic}</p>
+          </div>
         </div>
-        <img src={post.image} alt={post.title} className="w-full max-w-full h-auto my-8 rounded-lg"/>
-        <div className="text-xl leading-relaxed" dangerouslySetInnerHTML={{ __html: postContent }} />
+        <img src={post.image} alt={post.title} className="w-full h-auto my-8 rounded-lg max-w-full"/>
+        <div className="text-base md:text-lg leading-relaxed max-w-full break-words" dangerouslySetInnerHTML={{ __html: postContent }} />
       </main>
     </div>
   );

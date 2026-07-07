@@ -22,18 +22,18 @@ function Blog() {
           <h1 className="text-5xl font-bold">Blog</h1>
         </div>
 
-        <div className="flex flex-col sm:flex-row mt-6 mb-4 space-y-4 sm:space-y-0 sm:space-x-4"> {/* Adjusted for stacking on very small screens */}
+        <div className="flex flex-col sm:flex-row mt-6 mb-4 space-y-4 sm:space-y-0 sm:space-x-4">
           <input
             type="text"
             placeholder="Search posts..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="px-4 py-2 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full sm:w-auto"
+            className="px-4 py-2 bg-neutral-900 text-white border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full sm:w-auto"
           />
           <select
             value={selectedTopic}
             onChange={(e) => setSelectedTopic(e.target.value)}
-            className="px-4 py-2 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full sm:w-auto"
+            className="px-4 py-2 bg-neutral-900 text-white border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full sm:w-auto"
           >
             {topics.map(topic => (
               <option key={topic} value={topic}>{topic}</option>
@@ -44,13 +44,13 @@ function Blog() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredPosts.map(post => (
             <Link to={`/blog/${post.uid}`} key={post.uid}
-                  className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300
+                  className="bg-neutral-800 rounded overflow-hidden transition-shadow duration-300
                              w-full sm:w-11/12 md:w-full mx-auto md:mx-0">
               <img src={post.image} alt={post.title} className="w-full h-48 object-cover"/>
               <div className="p-6">
                 <h2 className="text-2xl font-bold mb-2">{post.title}</h2>
-                <p className="text-gray-400 text-sm mb-2">{post.date} - {post.topic}</p>
-                <p className="text-gray-300">{post.info}</p>
+                <p className="text-neutral-400 text-sm mb-2">{post.date} - {post.topic}</p>
+                <p className="text-neutral-300">{post.info}</p>
               </div>
             </Link>
           ))}

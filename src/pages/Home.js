@@ -30,8 +30,8 @@ function Home() {
               I'm most interested in data mining, AI safety, and biostatistics.
             <br/>
             <br/>
-              I spent the last year working at <a href="https://gmu.edu" className="hover:underline text-[var(--accent)]">GMU</a>, structuring court documents into knowledge graphs (<a href="https://arxiv.org/abs/2606.19710" className="hover:underline text-[var(--accent)]">paper</a>
-               under submission ICKG '26). I just started work this summer ('26) at <a href="https://rutgers.edu" className="hover:underline text-[var(--accent)]">Rutgers</a>, experimenting on external validation during statistical and ML modelling.
+              I spent the last year working at <a href="https://gmu.edu" className="hover:underline text-[var(--accent)]">GMU</a>, structuring court documents into knowledge graphs (<a href="https://arxiv.org/abs/2606.19710" className="hover:underline text-[var(--accent)]">paper</a>  <span> </span>
+                 under submission ICKG '26). I just started work this summer ('26) at <a href="https://rutgers.edu" className="hover:underline text-[var(--accent)]">Rutgers</a>, experimenting on external validation during statistical and ML modelling.
               Independently, I am looking at advancing watermarking methods for LLMs.
             <br />
             <br />
