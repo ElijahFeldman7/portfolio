@@ -4,20 +4,12 @@ import { Link, useLocation } from 'react-router-dom';
 const NavBar = () => {
   const location = useLocation();
   const [currentPage, setCurrentPage] = useState('');
-  const [showCursor, setShowCursor] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
     const pathName = location.pathname === '/' ? 'home' : location.pathname.substring(1);
     setCurrentPage(pathName.charAt(0).toUpperCase() + pathName.slice(1));
   }, [location]);
-
-  useEffect(() => {
-    const cursorInterval = setInterval(() => {
-      setShowCursor((prev) => !prev);
-    }, 500);
-    return () => clearInterval(cursorInterval);
-  }, []);
 
   const toggleSidebar = () => {
     setIsSidebarOpen((prev) => !prev);
