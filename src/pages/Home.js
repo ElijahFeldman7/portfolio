@@ -11,7 +11,7 @@ function Home() {
           <div>
             <h1 className="text-5xl text-neutral-100 mb-2"><Link to="/"><span className="font-semibold">Elijah</span> Feldman</Link></h1>
             <div className="text-neutral-300 text-lg mt-1">
-              Research Intern @ <Link to="https://rutgers.edu" className="hover:underline text-[var(--accent)]">Rutgers University</Link>
+              Research Intern @ <a href="https://rutgers.edu" className="hover:underline text-[var(--accent)]">Rutgers University</a>
              </div>
           </div>
           <div className="ml-8">
@@ -34,20 +34,20 @@ function Home() {
 
           <div>
             <p className="text-neutral-200 leading-relaxed">
-              Hi! I go by Eli. I am a student at <Link to="https://tjhsst.fcps.edu" className="hover:underline text-[var(--accent)]">Thomas Jefferson High School</Link>, and I like working on computer science research.
+              Hi! I go by Eli. I am a student at <a href="https://tjhsst.fcps.edu" className="hover:underline text-[var(--accent)]">Thomas Jefferson High School</a>, and I like working on computer science research.
               I'm most interested in data mining, AI safety, and biostatistics.
             <br/>
             <br/>
-              I spent the last year working at <a href="https://gmu.edu" className="hover:underline text-[var(--accent)]">GMU</a>, structuring court documents into knowledge graphs (<Link to="https://arxiv.org/abs/2606.19710" className="hover:underline text-[var(--accent)]">paper
-              </Link> under submission ICKG '26). I just started work this summer ('26) at <Link to="https://rutgers.edu" className="hover:underine text-[var(--accent)]">Rutgers</Link>, experimenting on external validation during statistical and ML modelling.
+              I spent the last year working at <a href="https://gmu.edu" className="hover:underline text-[var(--accent)]">GMU</a>, structuring court documents into knowledge graphs (<a href="https://arxiv.org/abs/2606.19710" className="hover:underline text-[var(--accent)]">paper</a>
+               under submission ICKG '26). I just started work this summer ('26) at <a href="https://rutgers.edu" className="hover:underline text-[var(--accent)]">Rutgers</a>, experimenting on external validation during statistical and ML modelling.
               Independently, I am looking at advancing watermarking methods for LLMs.
             <br />
             <br />
-              I also like to build software, including several <Link to="/projects" className="hover:underline text-[var(--accent)]">projects</Link>. I am currently building at <Link to="https://bioblitz.net" className="hover:underline text-[var(--accent)]">BioBlitz</Link>, a platform making competitive biology questions easily accessible. 
-              I volunteer at <Link to="https://arbccompetition.org" className="hover:underline text-[var(--accent)]">ARBC</Link> where I previously built testing softwar for biology competitions.
+              I also like to build software, including several <Link to="/projects" className="hover:underline text-[var(--accent)]">projects</Link>. I am currently building at <a href="https://bioblitz.net" className="hover:underline text-[var(--accent)]">BioBlitz</a>, a platform making competitive biology questions easily accessible. 
+              I volunteer at <a href="https://arbccompetition.org" className="hover:underline text-[var(--accent)]">ARBC</a> where I previously built testing softwar for biology competitions.
             <br />
             <br />
-              At my school, I volunteer as a student <Link to="https://sysadmins.tjhsst.edu" className="hover:underline text-[var(--accent)]">sysadmin</Link>, where we manage a cluster and linux servers.
+              At my school, I volunteer as a student <a href="https://sysadmins.tjhsst.edu" className="hover:underline text-[var(--accent)]">sysadmin</a>, where we manage a cluster and linux servers.
             </p>
 
           </div>

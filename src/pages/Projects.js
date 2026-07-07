@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 function Projects() {
   return (
@@ -20,21 +19,24 @@ function Projects() {
         </div>
       
         <div className="space-y-12">
-          <div id="bioblitz" className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12 items-start pt-12 border-t border-white">
-            <div className="col-span-1 md:col-span-2">
+          <div id="bioblitz" className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start pt-12 border-t border-white">
+            <div>
               <p className="text-sm text-white mb-2">Feb 2025 - Present</p>
               <h3 className="text-xl font-bold text-white mb-3">BioBlitz</h3>
               <p className="text-white leading-relaxed mb-4">
-                What started out as a hackathon project at HackTJ became something I continued. In hindsight, this project was much too large in scale for the hackathon. I'm working with a couple of friends on this currently. Hoping for launch around August 2026. We partenered with <Link to="https://Mitosisphere.org">Mitosisphere</Link>, a group of people that make quality biology questions.
+                While studying for biology olympiad, I noticed a lack of centralized problems. There were organization that made money off of
+                making their own courses that gatekept problem sets. LLMs also did not make very good problems, creating the need for
+                a shared source of quality contests to test people's knowledge. After each topic you learn, this platform has user-made contests,
+                and those made by people who perform well (top 50). My favorite part of this project was building the rating system and markov chain
+                based reccomendation system.
               </p>
-              <div className="flex flex-wrap items-center gap-1 mb-4 text-sm">
-                <span className="font-semibold">Links:</span>
-                <a href="https://github.com/bioblitz" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-white hover:text-white">Github</a><span>,</span>
-                <a href="https://bioblitz.net" target="_blank" rel="noopener noreferrer" className="underline font-semibold text-white hover:text-white">Email list</a>
+              <div className="flex flex-wrap items-center gap-3">
+                <a href="https://bioblitz.net" target="_blank" rel="noopener noreferrer" className="inline-block border border-white/30 text-white text-sm px-4 py-1.5 hover:bg-white hover:text-neutral-900 transition-colors duration-300">Website</a>
+                <a href="https://github.com/bioblitz" target="_blank" rel="noopener noreferrer" className="inline-block border border-white/30 text-white text-sm px-4 py-1.5 hover:bg-white hover:text-neutral-900 transition-colors duration-300">Code</a>
               </div>
             </div>
-            <div className="md:col-span-1 mt-4 md:mt-0 w-full sm:w-11/12 mx-auto md:w-auto md:mx-0">
-              <img src="/bioblitz.png" alt="Elijah Feldman BioBlitz Project Screenshot" className="rounded-sm shadow-md hover:shadow-xl transition-shadow duration-300" width="200" height="200" />
+            <div className="mt-4 md:mt-0">
+              <img src="/images/bioblitzcover.png" alt="Elijah Feldman BioBlitz Project Screenshot" className="w-full border border-neutral-400" />
             </div>
           </div>
 
