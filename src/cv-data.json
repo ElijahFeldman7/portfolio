@@ -1,0 +1,49 @@
+{
+  "education": [
+    {
+      "institution": "Thomas Jefferson High School for Science and Technology",
+      "location": "Alexandria, VA",
+      "degree": "High School Diploma; GPA: 4.0",
+      "dates": "Class of 2028",
+      "details": ["Coursework: AP Biology, AP Computer Science, Research Statistics 1"]
+    }
+  ],
+  "experience": [
+    {
+      "org": "George Mason University",
+      "location": "Fairfax, VA",
+      "role": "Research Intern",
+      "dates": "June 2024 - Present",
+      "bullets": [
+        { "label": "LLM Finetuning", "text": "Created a manually annotated 500+ sample dataset for parameter-efficient finetuning of an 8-billion parameter language model. Achieved a 25% performance improvement over a LLaMA 70B baseline in relationship and entity extraction tasks for legal court filings." },
+        { "label": "High-Performance Computing (HPC)", "text": "Ran training pipelines and evaluation metrics on A100 80GB GPU clusters using Slurm to send experiment jobs. Used Ollama for local model deployment and testing." },
+        { "label": "Empirical Evaluation & Data Analysis", "text": "Evaluated the fine-tuned model against both the model prior to fine-tuning and another baseline over thirty trials. Conducted rigorous statistical analyses to establish normality, correct for covariance, and validate statistical significance across trials." }
+      ]
+    },
+    {
+      "org": "TJ Computer Systems Lab",
+      "location": "Alexandria, VA",
+      "role": "Systems Administrator",
+      "dates": "Aug 2024 - Present",
+      "bullets": [
+        { "label": "Infrastructure Management", "text": "Maintained 30+ Debian-based workstations supporting a user base of over 60 students and faculty. Deployed and managed a web-based UI infrastructure enabling remote desktop access for 50+ concurrent users." },
+        { "label": "Cluster Administration", "text": "Maintained a 50+ node compute cluster. Deployed containerized virtual environments and optimized high-performance compute resources for the neuroscience laboratory." }
+      ]
+    }
+  ],
+  "projects": [
+    { "title": "Watermarking Diffusion Language Models", "url": null, "text": "Independent project mentored by a George Mason University faculty member involving the creation of a robust method for applying a watermark to diffusion language model generated text." },
+    { "title": "BioBlitz", "url": "https://bioblitz.net", "text": "Built and deployed a full-stack educational web platform serving 300+ active users with over 1000 completed assessments for MCAT or Biology Olympiad preparation. Implemented a recommendation system and Elo-based scoring algorithm. Utilized A/B testing to optimize platform analytics and user engagement." }
+  ],
+  "awards": [
+    { "title": "American Invitational Mathematics Examination (AIME)", "text": "Qualifier & AMC 10 Honor Roll (Top 2.5%)" },
+    { "title": "United States of America Computing Olympiad (USACO)", "text": "Gold Division (Top ~5% globally)" },
+    { "title": "United States of America Biology Olympiad (USABO)", "text": "2x Honorable Mention (Top 20% nationally)" }
+  ],
+  "skills": [
+    { "category": "Programming & Markup", "items": "Python, Java, JavaScript, LaTeX, HTML/CSS" },
+    { "category": "ML & Data Libraries", "items": "Hugging Face, scikit-learn, NumPy, pandas" },
+    { "category": "Tools & Frameworks", "items": "Linux, Slurm, Ollama, Git, React" },
+    { "category": "Core Competencies", "items": "High-Performance Computing (HPC), System Administration, Knowledge Graphs, Statistical Data Analysis" }
+  ]
+}

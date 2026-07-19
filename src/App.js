@@ -5,6 +5,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import Publications from './pages/Publications';
+import CV from './pages/CV';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import CreatePost from './pages/CreatePost';
@@ -35,6 +36,7 @@ function AppContent() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/publications" element={<Publications />} />
+          <Route path="/cv" element={<CV />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:uid" element={<BlogPost />} />

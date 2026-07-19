@@ -5,7 +5,8 @@ const galleryData = [
   },
   {
     "src": "/gallery/IMG_0640.jpg",
-    "caption": "Lake in the Tetons"
+    "caption": "Lake in the Tetons",
+    "portrait": true
   },
   {
     "src": "/gallery/IMG_0924.jpg",
@@ -57,7 +58,8 @@ const galleryData = [
   },
   {
     "src": "/gallery/IMG_2302.jpg",
-    "caption": "Niagara Falls"
+    "caption": "Niagara Falls",
+    "portrait": true
   },
   {
     "src": "/gallery/IMG_2319.jpg",

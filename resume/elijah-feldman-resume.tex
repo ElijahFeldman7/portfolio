@@ -1,0 +1,177 @@
+%-------------------------
+% Resume in LateX
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://elijahwfeldman.com/}{\Large Elijah Feldman}} & Email: \href{mailto:eli@elijahwfeldman.com}{eli@elijahwfeldman.com}\\
+  \href{https://elijahwfeldman.com/}{elijahwfeldman.com}
+  \href{https://github.com/elijahfeldman7}{github.com/ElijahFeldman7}
+
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Thomas Jefferson High School for Science and Technology}{Alexandria, VA}
+      {High School Diploma; GPA: 4.0}{Class of 2028}
+      \resumeItemListStart
+        \resumeItem{Coursework}{AP Biology, AP Computer Science, Research Statistics 1}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {George Mason University}{Fairfax, VA}
+      {Research Intern}{June 2024 -- Present}
+      \resumeItemListStart
+        \resumeItem{LLM Finetuning}
+          {
+            Created a manually annotated 500+ sample dataset for parameter-efficient finetuning of an 8-billion parameter language model. Achieved a 25\% performance improvement over a LLaMA 70B baseline in relationship and entity extraction tasks for legal court filings.
+          }
+        \resumeItem{High-Performance Computing (HPC)}
+          {
+            Ran training pipelines and evaluation metrics on A100 80GB GPU clusters using Slurm to send experiment jobs. Used Ollama for local model deployment and testing.
+          }
+        \resumeItem{Empirical Evaluation \& Data Analysis}
+          {
+            Evaluated the fine-tuned model against both the model prior to fine-tuning and another baseline over thirty trials. Conducted rigorous statistical analyses to establish normality, correct for covariance, and validate statistical significance across trials.
+          }
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {TJ Computer Systems Lab}{Alexandria, VA}
+      {Systems Administrator}{Aug 2024 -- Present}
+      \resumeItemListStart
+        \resumeItem{Infrastructure Management}
+          {
+            Maintained 30+ Debian-based workstations supporting a user base of over 60 students and faculty. Deployed and managed a web-based UI infrastructure enabling remote desktop access for 50+ concurrent users.
+          }
+        \resumeItem{Cluster Administration}
+          {
+            Maintained a 50+ node compute cluster. Deployed containerized virtual environments and optimized high-performance compute resources for the neuroscience laboratory.
+          }
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Watermarking Diffusion Language Models}
+      {Independent project mentored by a George Mason University faculty member involving the creation of a robust method for applying a watermark to diffusion language model generated text.}
+    \resumeSubItem{\href{https://bioblitz.net}{BioBlitz}}
+      {
+        Built and deployed a full-stack educational web platform serving 300+ active users with over 1000 completed assessments for MCAT or Biology Olympiad preparation. Implemented a recommendation system and Elo-based scoring algorithm. Utilized A/B testing to optimize platform analytics and user engagement.
+      }
+  \resumeSubHeadingListEnd
+
+\section{Awards \& Honors}
+    \resumeSubHeadingListStart
+        \resumeSubItem{American Invitational Mathematics Examination (AIME)}{Qualifier \& AMC 10 Honor Roll (Top 2.5\%)}
+        \resumeSubItem{United States of America Computing Olympiad (USACO)}{Gold Division (Top $\sim$5\% globally)}
+        \resumeSubItem{United States of America Biology Olympiad (USABO)}{2x Honorable Mention (Top 20\% nationally)}
+    \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Programming \& Markup}{: Python, Java, JavaScript, LaTeX, HTML/CSS}
+   }
+   \item{
+     \textbf{ML \& Data Libraries}{: Hugging Face, scikit-learn, NumPy, pandas}
+   }
+   \item{
+     \textbf{Tools \& Frameworks}{: Linux, Slurm, Ollama, Git, React}
+   }
+   \item{
+     \textbf{Core Competencies}{: High-Performance Computing (HPC), System Administration, Knowledge Graphs, Statistical Data Analysis}
+   }
+ \resumeSubHeadingListEnd
+
+\section{Publications}
+  \resumeSubHeadingListStart
+    \resumeSubItem{FineREX: Fine-Tuned NER-RE for Human Smuggling Knowledge Graphs}
+      {
+        Elijah Feldman, Dipak Meher, Carlotta Domeniconi. Under Review, ICKG 2026. \href{https://arxiv.org/abs/2606.19710}{arXiv:2606.19710}
+      }
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}

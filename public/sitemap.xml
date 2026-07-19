@@ -14,7 +14,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://elijahwfeldman.com/glacier.jpg</image:loc>
+      <image:loc>https://elijahwfeldman.com/images/glacier.jpg</image:loc>
       <image:caption>Elijah Feldman</image:caption>
     </image:image>
   </url>
@@ -27,6 +27,11 @@
     <loc>https://elijahwfeldman.com/publications</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://elijahwfeldman.com/cv</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://elijahwfeldman.com/blog</loc>
@@ -42,6 +47,78 @@
     <loc>https://elijahwfeldman.com/gallery</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+    <image:image>
+      <image:loc>https://elijahwfeldman.com/gallery/IMG_0640.jpg</image:loc>
+      <image:caption>Elijah Feldman at the Grand Tetons</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elijahwfeldman.com/gallery/IMG_2302.jpg</image:loc>
+      <image:caption>Elijah Feldman at Niagara Falls</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elijahwfeldman.com/gallery/IMG_0602.jpg</image:loc>
+      <image:caption>Grand Tetons, WY - photo by Elijah Feldman</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elijahwfeldman.com/gallery/IMG_0924.jpg</image:loc>
+      <image:caption>Iceberg Lake, Glacier NP - photo by Elijah Feldman</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elijahwfeldman.com/gallery/IMG_0962.jpg</image:loc>
+      <image:caption>Logan's Pass, Glacier NP - photo by Elijah Feldman</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elijahwfeldman.com/gallery/IMG_0992.jpg</image:loc>
+      <image:caption>Logan's Pass, Glacier NP - photo by Elijah Feldman</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elijahwfeldman.com/gallery/IMG_0996.jpg</image:loc>
+      <image:caption>Logan's Pass, Glacier NP - photo by Elijah Feldman</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elijahwfeldman.com/gallery/IMG_1150.jpg</image:loc>
+      <image:caption>El Capitan, Yosemite - photo by Elijah Feldman</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elijahwfeldman.com/gallery/IMG_1234.jpg</image:loc>
+      <image:caption>Yosemite - photo by Elijah Feldman</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elijahwfeldman.com/gallery/IMG_1245.jpg</image:loc>
+      <image:caption>Rocks, Yosemite - photo by Elijah Feldman</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elijahwfeldman.com/gallery/IMG_1281.jpg</image:loc>
+      <image:caption>Vernal Falls, Yosemite - photo by Elijah Feldman</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elijahwfeldman.com/gallery/IMG_1308.jpg</image:loc>
+      <image:caption>Bay Area - photo by Elijah Feldman</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elijahwfeldman.com/gallery/IMG_1502.jpg</image:loc>
+      <image:caption>Washington Monument, DC - photo by Elijah Feldman</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elijahwfeldman.com/gallery/IMG_1815.jpg</image:loc>
+      <image:caption>Public art - photo by Elijah Feldman</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elijahwfeldman.com/gallery/IMG_2001.jpg</image:loc>
+      <image:caption>Chess clock - photo by Elijah Feldman</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elijahwfeldman.com/gallery/IMG_2319.jpg</image:loc>
+      <image:caption>Rainbow at Niagara Falls - photo by Elijah Feldman</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elijahwfeldman.com/gallery/IMG_2323.jpg</image:loc>
+      <image:caption>Niagara Falls - photo by Elijah Feldman</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://elijahwfeldman.com/gallery/IMG_2518.jpg</image:loc>
+      <image:caption>A dog on a farm - photo by Elijah Feldman</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://elijahwfeldman.com/contact</loc>

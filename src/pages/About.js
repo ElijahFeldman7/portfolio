@@ -84,7 +84,7 @@ function About() {
             </p> 
           </div>
           <figure className="w-full md:w-80 ml-0 md:ml-4 mt-4 md:mt-0 flex-shrink-0">
-            <img src="/glacier.jpg" alt="Elijah Feldman" className="fade-in rounded-md" />
+            <img src="/images/glacier.jpg" alt="Elijah Feldman" className="fade-in rounded-md" />
             <figcaption className="mt-2 text-center text-white text-sm italic">Glacier National Park, Montana</figcaption>
           </figure>
         </div>

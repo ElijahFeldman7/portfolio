@@ -17,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "compress-images": "node scripts/compress-images.js",
+    "screenshot-site": "node scripts/screenshot-site.js"
   },
   "eslintConfig": {
     "extends": [
@@ -36,5 +38,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "puppeteer-core": "^25.3.0",
+    "sharp": "^0.35.3"
   }
 }

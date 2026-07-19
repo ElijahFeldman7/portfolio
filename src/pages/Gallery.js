@@ -20,11 +20,11 @@ function Gallery() {
         <div className="columns-3 gap-4 max-lg:columns-2 max-sm:columns-1">
           {galleryData.map((image, index) => (
             <div className="relative break-inside-avoid mb-4 overflow-hidden rounded-lg group" key={index}>
-              <img 
-                src={image.src} 
-                alt={`At ${image.caption}`} 
-                title={`Elijah Feldman - Full photo from ${image.caption}`}
-                className="w-full h-auto block transition-transform duration-300 group-hover:scale-105" 
+              <img
+                src={image.src}
+                alt={image.portrait ? `Elijah Feldman at ${image.caption}` : `${image.caption} — photographed by Elijah Feldman`}
+                title={image.portrait ? `Elijah Feldman at ${image.caption}` : `Photo by Elijah Feldman: ${image.caption}`}
+                className="w-full h-auto block transition-transform duration-300 group-hover:scale-105"
               />
               <div className="absolute bottom-0 left-0 w-full bg-neutral-900 text-white p-3 translate-y-full transition-transform duration-300 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">{image.caption}</div>
             </div>
