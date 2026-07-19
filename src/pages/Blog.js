@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import blogPosts from '../blog-posts.js';
+import SEO from '../components/SEO';
 
 function Blog() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -17,6 +18,11 @@ function Blog() {
 
   return (
     <div className="min-h-screen flex flex-col justify-center text-white">
+      <SEO
+        title="Blog"
+        description="Articles and posts by Elijah Feldman on technology, research, and more."
+        path="/blog"
+      />
       <main className="max-w-6xl mx-auto text-left pt-0 px-2 sm:px-4 flex-1 flex flex-col justify-start bg-neutral-900 bg-opacity-70 p-4">
         <div className="mt-8">
           <h1 className="text-5xl font-bold">Blog</h1>

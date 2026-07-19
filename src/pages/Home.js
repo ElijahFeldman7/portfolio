@@ -1,10 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 
 function Home() {
   return (
     <>
+      <SEO
+        description="Elijah Feldman — student researcher at TJHSST working on AI safety, data mining, and biostatistics."
+        path="/"
+      />
       <div className="min-h-screen flex flex-col justify-center relative z-10">
       <main className="max-w-xl mx-auto text-left flex-1 flex flex-col justify-start p-4 bg-neutral-900 bg-opacity-70">
         <div className="mt-8 flex items-center justify-between">

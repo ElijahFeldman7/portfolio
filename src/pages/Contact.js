@@ -1,9 +1,15 @@
 
 import React from 'react';
+import SEO from '../components/SEO';
 
 function Contact() {
   return (
     <div className="min-h-screen flex flex-col">
+      <SEO
+        title="Contact"
+        description="Contact Elijah Feldman by email or find him on GitHub and LinkedIn."
+        path="/contact"
+      />
       <main className="max-w-5xl text-left pt-0 pl-32 pr-4 flex-1 flex flex-col justify-start bg-neutral-900 bg-opacity-70 p-4">
         <div className="mt-8 px-20 flex items-start justify-between">
           <div>
@@ -30,7 +36,7 @@ function Contact() {
             <a href="mailto:ef594@rutgers.edu" className=" text-3xl text-white hover:underline hover:text-gray-400">ef594 <span className="text-gray-500">[@]</span> rutgers.edu</a>
             <p className="text-medium text-neutral-300">For Rutgers research related inquiries.</p>
           </div>
-          <h1 className="text-6xl font-semibold flex text-left">
+          <h1 className="text-5xl font-semibold flex text-left">
               <span className="left">Socials</span>
           </h1>
           <div className="my-4">

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import blogPosts from '../blog-posts.js';
+import SEO from '../components/SEO';
 
 function BlogPost() {
   const { uid } = useParams();
@@ -22,6 +23,11 @@ function BlogPost() {
 
   return (
     <div className="min-h-screen flex flex-col justify-center">
+      <SEO
+        title={post.title}
+        description={post.info}
+        path={`/blog/${post.uid}`}
+      />
       <main className="max-w-6xl mx-auto text-left pt-0 px-4 flex-1 flex flex-col justify-start bg-neutral-900 bg-opacity-70 p-4">
         <div className="mt-8 flex items-start justify-between">
           <div>

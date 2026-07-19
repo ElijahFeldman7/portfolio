@@ -1,0 +1,11 @@
+[
+  {
+    "title": "BioBlitz",
+    "date": "Feb 2025 - Present",
+    "description": "While studying for biology olympiad, I noticed a lack of centralized problems. There were organization that made money off of making their own courses that gatekept problem sets. LLMs also did not make very good problems, creating the need for a shared source of quality contests to test people's knowledge. After each topic you learn, this platform has user-made contests, and those made by people who perform well (top 50). My favorite part of this project was building the rating system and markov chain based reccomendation system.",
+    "image": "/images/bioblitzcover.png",
+    "links": [
+      { "label": "Website", "url": "https://bioblitz.net" }
+    ]
+  }
+]

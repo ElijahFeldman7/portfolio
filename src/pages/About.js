@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 function About() {
   const [typedText, setTypedText] = useState('');
@@ -55,6 +56,11 @@ function About() {
 
   return (
     <div className="min-h-screen flex flex-col justify-center">
+      <SEO
+        title="About"
+        description="About Elijah Feldman, a student researcher at TJHSST working with Rutgers and GMU on AI safety, data mining, and biostatistics."
+        path="/about"
+      />
       <main className="max-w-6xl mx-auto text-left pt-0 px-4 flex-1 flex flex-col justify-start bg-neutral-900 bg-opacity-70 p-4">
         <div className="mt-8 flex items-start justify-between">
           <div>
