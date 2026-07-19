@@ -1,0 +1,12 @@
+[
+  {
+    "title": "FineREX: Fine-Tuned NER-RE for Human Smuggling Knowledge Graphs",
+    "authors": ["Elijah Feldman", "Dipak Meher", "Carlotta Domeniconi"],
+    "venue": "Under Review — ICKG 2026",
+    "links": [
+      { "tag": "abs", "url": "https://arxiv.org/abs/2606.19710" },
+      { "tag": "pdf", "url": "https://arxiv.org/pdf/2606.19710" },
+      { "tag": "code", "url": "https://github.com/ElijahFeldman7/FineREX"}
+    ]
+  }
+]

@@ -24,45 +24,40 @@ const NavBar = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Projects', path: '/projects' },
+    { name: 'Publications', path: '/publications' },
     { name: 'Blog', path: '/blog' },
     { name: 'Contact Me', path: '/contact' },
     { name: 'Gallery', path: '/gallery'}
   ];
 
   return (
-    <nav className="absolute top-5 left-0 w-full max-w-none px-10 py-2.5 box-border bg-neutral-900 rounded-b-lg flex justify-between items-center z-[1000] text-white">
+    <nav className="absolute top-5 left-0 w-full max-w-none px-4 sm:px-6 md:px-10 py-2.5 box-border bg-neutral-900 rounded-b-lg flex justify-between items-center z-[1000] text-white">
       <Link to="/" className="text-lg font-bold text-white no-underline">
         <span className="text-[var(--accent)]">ef</span>/{currentPage}
       </Link>
 
-      <div className="flex items-center gap-5">
-        <div className="hidden md:flex gap-5">
-          {pages.map((page) => (
-            <Link
-              key={page.name}
-              to={page.path}
-              className={`no-underline transition-colors duration-300 ${isActive(page.path) ? 'text-[var(--accent)]' : 'text-white hover:text-[var(--accent)]'}`}
-            >
-              {page.name}
-            </Link>
-          ))}
-        </div>
-
-        <div className="flex items-center gap-[15px]">
-          <button
-            onClick={toggleSidebar}
-            className="md:hidden bg-transparent border-none text-white cursor-pointer text-lg rounded px-2.5 py-1"
+      <div className="hidden md:flex items-center gap-5">
+        {pages.map((page) => (
+          <Link
+            key={page.name}
+            to={page.path}
+            className={`no-underline transition-colors duration-300 ${isActive(page.path) ? 'text-[var(--accent)]' : 'text-white hover:text-[var(--accent)]'}`}
           >
-            {isSidebarOpen ? '✕' : '☰'}
-          </button>
-        </div>
+            {page.name}
+          </Link>
+        ))}
       </div>
+
+      <button
+        onClick={toggleSidebar}
+        aria-label={isSidebarOpen ? 'Close menu' : 'Open menu'}
+        className="md:hidden relative z-[1001] w-9 h-9 flex items-center justify-center bg-transparent border-none text-white cursor-pointer text-xl leading-none rounded"
+      >
+        {isSidebarOpen ? '✕' : '☰'}
+      </button>
 
       {isSidebarOpen && (
         <div className="fixed inset-0 bg-neutral-900 z-[999] flex flex-col items-center justify-center gap-6" onClick={() => setIsSidebarOpen(false)}>
-          <button onClick={toggleSidebar} className="absolute top-6 right-6 bg-transparent border-none text-white cursor-pointer text-2xl">
-            ✕
-          </button>
           {pages.map((page) => (
             <Link
               key={page.name}

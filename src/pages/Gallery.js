@@ -4,13 +4,13 @@ import SEO from '../components/SEO';
 
 function Gallery() {
   return (
-    <div className="min-h-screen flex flex-col justify-center">
+    <div className="min-h-screen flex flex-col">
       <SEO
         title="Gallery"
         description="A photo gallery of travel and nature photos taken by Elijah Feldman."
         path="/gallery"
       />
-      <main className="max-w-6xl mx-auto p-4 flex-1 flex flex-col justify-start bg-neutral-900 bg-opacity-70">
+      <main className="max-w-6xl mx-auto w-full text-left px-4 sm:px-6 md:px-8 flex-1 flex flex-col justify-start bg-neutral-900 bg-opacity-70 p-4">
         <div className="mt-8 mb-4">
           <h1 className="text-5xl font-bold">Gallery</h1>
         </div>

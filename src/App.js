@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
+import Publications from './pages/Publications';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import CreatePost from './pages/CreatePost';
@@ -33,6 +34,7 @@ function AppContent() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/publications" element={<Publications />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:uid" element={<BlogPost />} />

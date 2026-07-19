@@ -7,5 +7,28 @@
     "links": [
       { "label": "Website", "url": "https://bioblitz.net" }
     ]
+  },
+  {
+    "title": "TJ Rocketry Site",
+    "date": "June 2026 - July 2026",
+    "description": "I made this website as webmaster for my school's rocketry club. It uses postgresql for storage, and features a role based system allowing elevated privleges, a file storage page with features similar to google drive with dragging and dropping files, and an automated attendance system (saving many hours compounded of the manual process). Other notable features are officers can schedule launch dates, and manage an inventory system where students make requests for items and must get them approved for certain ones. This eliminates the previous manual system of taking inventory.",
+    "image": "/images/tjrocketrycover.png",
+    "links": [
+      { "label": "Website", "url": "https://tjrocketry.org" },
+      { "label": "Code", "url": "https://github.com/TJ-Rocketry/TJRocketry"}
+
+    ]
+  },
+  {
+    "title": "TJ Biology Olympiad Site",
+    "date": "July 2026",
+    "description": "You can tell I like to use my skills in web development and cs for other applications. In this case, this site was for my school's biology olympiad club, handling attendance, scheduling, serving as a centralized location for resources, and the UI is partially inspired by Ollama.",
+    "image": "/images/biolycover.png",
+    "links":[
+      { "label": "Website", "url": "https://tjbioly.vercel.app"},
+      { "label": "Code", "url": "https://github.com/TJBiologyOlympiad/TJBiologyOlympiad"}
+    ]
+
+
   }
 ]

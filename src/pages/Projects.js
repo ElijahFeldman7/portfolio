@@ -11,20 +11,20 @@ function slugify(text) {
 
 function Projects() {
   return (
-    <div className="min-h-screen flex flex-col justify-center">
+    <div className="min-h-screen flex flex-col">
       <SEO
         title="Projects"
         description="Software projects built by Elijah Feldman, including BioBlitz, a platform for competitive biology practice."
         path="/projects"
       />
-      <main className="max-w-6xl mx-auto text-left pt-0 px-4 sm:px-6 md:px-8 flex-1 flex flex-col justify-start bg-neutral-900 bg-opacity-70 p-4">
+      <main className="max-w-6xl mx-auto w-full text-left px-4 sm:px-6 md:px-8 flex-1 flex flex-col justify-start bg-neutral-900 bg-opacity-70 p-4">
         <div className="mt-8 flex items-start justify-between">
           <div>
             <h1 className="text-5xl font-bold">Projects</h1>
           </div>
         </div>
         <div className="mt-8 mb-12">
-          <h2 className="font-semibold text-medium mb-2">Table of Contents</h2>
+          <h2 className="font-semibold text-lg mb-2">Table of Contents</h2>
           <ul className="list-inside text-white space-y-1">
             {projects.map((project) => (
               <li key={project.title}>
